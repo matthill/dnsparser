@@ -26,3 +26,8 @@ include(cmake/cxx_flag_overrides.cmake)
 add_subdirectory(src)
 add_subdirectory(test)
 
+install(TARGETS zdnsparser
+  LIBRARY DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+  ARCHIVE DESTINATION ${CMAKE_INSTALL_PREFIX}/lib
+)
+install(FILES include/dnsparser.h DESTINATION    ${CMAKE_INSTALL_PREFIX}/include/dnsparser)
